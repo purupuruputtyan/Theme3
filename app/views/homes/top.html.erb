@@ -22,10 +22,18 @@
         <p>about various books!</p>
         <div class="btn-wrapper col-10 mx-auto">
           <div class="row">
-            <a class="btn btn-info btn-sm btn-block mb-3 sign_in" href="/users/sign_in">Log in</a>
+            <button type="button" class="btn btn-primary btn-lg">
+           　  <%= link_to new_user_registration_path do %>
+                Sign up
+              <% end %>
+            </button>
           </div>
           <div class="row">
-            <a class="btn btn-success btn-sm btn-block sign_up" href="/users/sign_up">Sign up</a>
+            <button type="button" class="btn btn-primary btn-lg">
+              <%= link_to new_user_session_path do %>
+                Log in
+              <% end %>
+            </button> 
           </div>
         </div>
       </div>
