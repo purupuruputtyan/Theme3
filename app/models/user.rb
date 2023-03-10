@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one_attached :profile_image
-  has_many :books, dependent: :destroy
+  has_one_attached :profile_image #カリキュラム８章
+  has_many :books, dependent: :destroy #カリキュラム９章
   
   def get_profile_image
     unless profile_image.attached?

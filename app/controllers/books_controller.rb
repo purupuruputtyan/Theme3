@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  def create
+  def create#10章
     @book = Book.new(book_params)
     @books = Book.all
     @book.user_id = current_user.id
@@ -42,7 +42,8 @@ class BooksController < ApplicationController
   end
 
   private
-  def book_params
+
+  def book_params#10章
     params.require(:book).permit(:title, :body)
   end
 end
