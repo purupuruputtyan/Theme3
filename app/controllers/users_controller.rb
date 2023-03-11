@@ -3,7 +3,6 @@ class UsersController < ApplicationController
     @users = User.all
     @user = current_user
     @book = Book.new
-    #@user = get_profile_image
   end
 
   def show
