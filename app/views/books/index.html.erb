@@ -1,10 +1,19 @@
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>件のエラーが発生しました
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-md-3">
 　    <%= render '/users/user', user: @user %>
       <%= render 'list', book: @book %>
     </div>
-    
+
     <div class="col-md-8 offset-md-1">
       <div class="table table-hover table-inverse">
         <h1>Books</h1>
@@ -29,6 +38,6 @@
         </table>
       </div>
     </div>
-  
+
   </div>
 </div>
