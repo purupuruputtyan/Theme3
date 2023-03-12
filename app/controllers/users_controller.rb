@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 private
 
   def user_params#10章
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :profile_image, :introduction)
   end
 end
 
