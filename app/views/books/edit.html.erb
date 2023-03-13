@@ -30,7 +30,7 @@
           <%= f.submit 'Update Book', class: "btn btn-success text-white" %>
         </div>
       <% end %>
-      <%= link_to 'Show', book_path(current_user.id) %>
+      <%= link_to 'Show', book_path(@book.id) %>
       |
       <%= link_to 'Back', books_path %>
 
